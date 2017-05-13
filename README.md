@@ -2,6 +2,10 @@
 
 The **Custom CSS** Plugin for the [Grav CMS](http://github.com/getgrav/grav) allows to add additional CSS to your site, without editing the theme or having to create a plugin for the simple task of adding some custom lines of sylesheets.
 
+## Demo
+
+![](https://github.com/paulmassen/grav-plugin-assets-manager/blob/master/assets/assets-demo.gif?raw=true)
+
 ## Description
 
 Adds some custom CSS to your Grav site.
