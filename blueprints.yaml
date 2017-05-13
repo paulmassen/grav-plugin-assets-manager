@@ -1,0 +1,46 @@
+name: Assets Manager
+version: 0.2.1
+description: Adds some custom Assets to your Grav site with the convenience of cdn lookup
+icon: plug
+author:
+  name: Paul Massendari
+  email: paul@massendari.com
+homepage: https://github.com/paulmassen/grav-plugin-assets-manager
+keywords: grav, plugin, css,js, design
+bugs: https://github.com/paulmassen/grav-plugin-assets-manager/issues
+license: MIT
+
+form:
+  validation: strict
+  fields:
+    enabled:
+      type: toggle
+      label: Plugin status
+      highlight: 1
+      default: 0
+      options:
+        1: Enabled
+        0: Disabled
+      validate:
+        type: bool
+
+    css_inline:
+      type: textarea
+      label: Inline CSS
+      help: CSS that will be added inline to every page
+
+    css_files:
+      type: list
+      label: CSS Files
+      help: CSS Files that will be loaded on every page. Use relative or absolute URLs
+      fields:
+        .path:
+          type: text
+          label: File path
+          classes: autoComplete
+          help: Relative to web root
+        .priority:
+          type: int
+          label: Priority (0=Default)
+          help: Lower means later inclusion. Negative value to add this file after the other files (that come with the theme)
+          default: 0
